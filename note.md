@@ -2,8 +2,7 @@ Here's a well-organized DevOps **reference note** for frequently used `sh` (Shel
 
 ---
 
-# 🧾 DevOps Shell Scripting Cheat Sheet
-
+# 🧾 DevOps Shell Scripting 
 ## 🧠 Basics
 
 ```sh

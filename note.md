@@ -148,7 +148,11 @@ sed -n '10,20p' logfile.log           # print lines 10-20
 ---
 
 ## ❗ Exit Status and Error Handling
+$? — This holds the exit status of the last command that was run.
 
+-eq — This means "equal to" in shell scripting.
+
+0 — Exit status 0 means success.
 ### Check Last Command Status
 
 ```sh

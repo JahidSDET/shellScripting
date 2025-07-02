@@ -180,3 +180,54 @@ set -e  # Script stops if any command fails
 ---
 
 Let me know if you'd like this as a downloadable `.md` file or formatted PDF.
+
+
+Sure! Here's the **updated short note** with **examples added to the system info table**:
+
+---
+
+### 🕒 **Cron Job (Scheduled Tasks)**
+
+**Cron** is used to schedule scripts or commands to run automatically at specific times.
+
+**Syntax (`crontab -e`):**
+
+```
+* * * * * /path/to/command
+│ │ │ │ │
+│ │ │ │ └─ Day of week (0-6, Sun=0)
+│ │ │ └─── Month (1-12)
+│ │ └───── Day of month (1-31)
+│ └─────── Hour (0-23)
+└───────── Minute (0-59)
+```
+
+**Examples:**
+
+* `0 9 * * * /home/user/backup.sh`
+  ➤ Run backup every day at **9 AM**
+* `*/15 * * * * /home/user/ping_check.sh`
+  ➤ Run ping check **every 15 minutes**
+* `@reboot /home/user/startup_task.sh`
+  ➤ Run script **at system startup**
+
+---
+
+### 🖥️ **System Information Commands**
+
+| Purpose         | Command               | Example Output (Sample)               |
+| --------------- | --------------------- | ------------------------------------- |
+| System uptime   | `uptime`              | `12:01 up 3 days, 4:23, 3 users`      |
+| Kernel version  | `uname -r`            | `5.15.0-91-generic`                   |
+| OS info         | `cat /etc/os-release` | `Ubuntu 22.04.4 LTS`                  |
+| Disk usage      | `df -h`               | `/dev/sda1  40G  20G  18G  54% /`     |
+| Memory usage    | `free -h`             | `Mem: 7.6G used, 8.2G total`          |
+| CPU info        | `lscpu`               | `Intel i7 @ 2.60GHz, 8 cores`         |
+| Logged-in users | `who`                 | `user  tty1  Jul 2 08:10`             |
+| Top processes   | `top` or `htop`       | Interactive table of CPU/memory usage |
+| IP Address      | `hostname -I`         | `192.168.1.100`                       |
+
+---
+
+Let me know if you'd like to turn this into a PDF cheat sheet or add more admin tools (like `journalctl`, `systemctl`, etc.).
+
